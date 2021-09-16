@@ -1,0 +1,12 @@
+.review {
+    background-image: url('../assets/scroll.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 400px;
+    width: 200x;
+    margin: 25px;
+}
+.review__content {
+    margin: 60px;
+}

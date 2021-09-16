@@ -1,4 +1,6 @@
-.app_banner {
+.banner {
+  display: flex;
+  justify-content: space-around;
   padding-left: 5%;
   padding-bottom: 15px;
   padding-top: 15px;
@@ -9,6 +11,17 @@
 		-1px 1px 0 rgb(215, 218, 178),
 		1px 1px 0 rgb(215, 218, 178);
   color: rgb(150, 99, 99);
+}
+
+.banner__photo {
+  width: 100px;
+  height: 100px;
+}
+
+.reviews {
+  display: grid;
+  background-color: rgba(82, 28, 28, 0.651);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 h1 {
