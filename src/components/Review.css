@@ -9,4 +9,10 @@
 }
 .review__content {
     margin: 60px;
+    font-family: "Tangerine";
+    font-size: 24px;
+    font-weight: 700;
+}
+.review__rating {
+    display: flex;
 }

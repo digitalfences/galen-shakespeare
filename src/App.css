@@ -21,7 +21,8 @@
 .reviews {
   display: grid;
   background-color: rgba(82, 28, 28, 0.651);
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  width: 100%;
 }
 
 h1 {
@@ -30,4 +31,17 @@ h1 {
 }
 h2 {
   font-size: 24px;
+}
+
+
+@media screen and (min-width: 601px) {
+  .reviews {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1101px) {
+  .reviews {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
