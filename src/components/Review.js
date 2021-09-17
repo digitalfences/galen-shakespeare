@@ -15,9 +15,9 @@ const Review = ({review}) => {
         <div className="review">
             <div className="review__content">
                 <div className="review__rating">
-                    {stars.map((num) => {
-                        if(num == 0) {return <>&#9734;</> }
-                        else { return (<>&#9733;</>)};
+                    {stars.map((num,index) => {
+                        if(num === 0) {return <div key={index}>&#9734;</div> }
+                        else { return (<div key={index}>&#9733;</div>)};
                     })}
                     {review.rating}    
                 </div> 
