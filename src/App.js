@@ -28,7 +28,6 @@ function useReviewAPI() {
     }
 
   return () => {
-      console.log("reached")
       isStopped = true;
     }; 
   }, []);

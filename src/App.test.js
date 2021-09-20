@@ -51,20 +51,17 @@ describe("App", () => {
     await act(async() => {
       render(<App></App>)
       await waitForElementToBeRemoved(() => screen.getByRole('heading', {name: /Loading.../i}), {timeout: 3000})
-      screen.debug
     })
   })
 
   it("displays the reviews from Shakepeare's API", async () => {
     async() => {
       render(<App></App>)
-
       const review = await screen.findByRole('gridcell', {name: stubbedReviews[0].body})
       screen.getByRole('gridcell', {name: stubbedReviews[1].body})
       screen.getByRole('gridcell', {name: stubbedReviews[2].body})
       expect(review).toBeInTheDocument
-      screen.debug
+      
     }
-    screen.debug
   })
 });
