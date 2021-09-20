@@ -6,9 +6,9 @@ const Review = ({review}) => {
 
     let rating = Math.round(review.rating)
     let stars = [0,0,0,0,0]
-    for (let i = 0; i < 5; i++) {
+    for (let i = 1; i <= 5; i++) {
         if (rating >= i) {
-            stars[i] = 1
+            stars[i-1] = 1
         }
     }
     return (
