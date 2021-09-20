@@ -7,18 +7,18 @@ const baseURL = "https://shakespeare.podium.com/api/reviews";
 
 function useReviewAPI() {
   const [reviews, setReviews] = useState(null);
-
   useEffect(() => {
     let isStopped = false;
 
     if (!isStopped) {
       const getReviews = async () => {
         try {
-          const reviews = await axios.get(baseURL, {
+          const {data: reviews } = await axios.get(baseURL, {
             headers: { "x-api-key": "H3TM28wjL8R4#HTnqk?c" },
           });
           if (!isStopped && reviews) {
-            setReviews(reviews.data);
+            setReviews(reviews);
+            isStopped = true;
           }
         } catch (error) {
           console.error(error);
@@ -27,9 +27,10 @@ function useReviewAPI() {
       getReviews();
     }
 
-    return () => {
+  return () => {
+      console.log("reached")
       isStopped = true;
-    };
+    }; 
   }, []);
 
   return [reviews];
